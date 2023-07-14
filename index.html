@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do List</title>
-    <!-- css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To do List</title>
+        <!-- css -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <main>
+            <h3>To do List</h3>
+            <article class="taskAdd">
+                <p class="taskP">New task</p>
+                <input type="text" id="newTask" />
+                <button id="addTask">Add</button>
+            </article>
+            <article class="taskCount">
+                Total: <b id="count">0</b>
+                Done: <b id="done">0</b>
+                ID: <b id="id"></b>
+                Task: <b id="taskDisplay"></b>
+            </article>
+        </main>
 
-    <!-- script -->
-    <script src="assets/js/script.js"></script>
-</body>
+        <!-- script -->
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>
