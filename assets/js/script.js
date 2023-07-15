@@ -4,52 +4,53 @@ let tasks = [
     { id: 3, name: "Find tattoo artist", completed: false },
 ];
 
-let addNewTask = document.getElementById("addTask");
-let taskAdd = document.getElementById("addTask");
-let count = document.getElementById("count");
-let done = document.getElementById("done");
-let taskList = document.getElementsByClassName("taskList");
+let inputAdd = document.querySelector("#inputAdd");
+let btnAdd = document.querySelector("#btnAdd");
+let count = document.querySelector("#count");
+let done = document.querySelector("#done");
+let taskList = document.querySelector(".taskList");
 
-let addTask = () => {
-    let taskName = addNewTask.value;
+let taskAdd = () => {
+    let taskName = inputAdd.value;
     if (!taskName) {
-        alert("Add a task!");
-        return;
+        alert ("Add a task!");
+        return false;
     }
-    let lastTask = tasks[tasks.lenght - 1];
+    let lastTask = tasks[tasks.length-1];
     let newTask = {
         id: lastTask ? lastTask.id + 1 : 1,
         name: taskName,
         completed: false,
     };
     tasks.push(newTask);
-    // renderTasks();
+    inputAdd.value = "";
+    renderTasks();
 };
 
-taskAdd.addEventListener("click", addTask);
+btnAdd.addEventListener("click", taskAdd);
 
-let changeStatus = (id) => {
+const changeStatus = (id) => {
     let taskIndex = tasks.findIndex((task) => task.id === id);
     if (tasks[taskIndex].completed == false) {
-        let newItem = {
+        let newObject = {
             id: tasks[taskIndex].id,
             name: tasks[taskIndex].name,
-            completed: true
+            completed:true,
         };
-        tasks.splice(taskIndex, 1, newItem);
+        tasks.splice(taskIndex, 1, newObject);
     }
     else {
-        let newItem = {
+        let newObject = {
             id: tasks[taskIndex].id,
             name: tasks[taskIndex].name,
-            completed: false
+            completed:false,
         };
-        tasks.splice(taskIndex, 1, newItem);
+        tasks.splice(taskIndex, 1, newObject);
     }
-    renderTask();
-};
+    renderTasks();
+}
 
-let renderTask = () => {
+let renderTasksTasks = () => {
     let html = "";
     let inputCheck = "";
     let doneCount = [];
@@ -72,4 +73,4 @@ let renderTask = () => {
     done.innerHTML = doneCount.length;
 };
 
-renderTask();
+renderTasks();

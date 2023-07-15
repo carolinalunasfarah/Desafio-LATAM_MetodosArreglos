@@ -6,23 +6,22 @@
         <title>To do List</title>
         <!-- css -->
         <link rel="stylesheet" href="assets/css/style.css" />
+        <!-- fontawesome -->
     </head>
     <body>
         <main>
             <h3>To do List</h3>
-            <article class="taskAdd">
-                <p class="taskP">New task</p>
-                <input type="text" id="addTask" />
-                <button id="addTask">Add</button>
+            <article class="addingTask">
+                <input
+                    type="text"
+                    id="inputAdd" />
+                <button id="btnAdd">Add</button>
             </article>
             <article class="taskCount">
-                <span id="count">Total: </span>
-                <span id="done">Done: </span>
+                <p>Total: <span id="count"></span></p>
+                <p>Done: <span id="done"></span></p>
             </article>
-            <article class="taskList">
-                <span id="newID">ID</span>
-                <span id="newTask">Task</span>
-            </article>
+            <article class="taskList"></article>
         </main>
 
         <!-- script -->
