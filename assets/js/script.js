@@ -50,18 +50,24 @@ const changeStatus = (id) => {
     renderTasks();
 }
 
-let renderTasksTasks = () => {
+const deleteTask = (id) => {
+    let taskIndex = tasks.findIndex((task) => task.id ===id);
+    tasks.splice(taskIndex, 1);
+    renderTasks();
+}
+
+let renderTasks = () => {
     let html = "";
     let inputCheck = "";
     let doneCount = [];
     tasks.forEach((task) => {
-        inputCheck = completed
-            ? `<span class="completed" onclick="changeStatus(${task.id})">${task.name}</span>`
-            : `<span onclick= "changeStatus(${task.id})">${task.name}</span`;
+        inputCheck = task.completed
+        ? `<span class="completed" onclick="changeStatus(${task.id})">${task.name}</span>`
+        : `<span  onclick="changeStatus(${task.id})">${task.name}</span>`;
         html += `
         <article class= "check">
-            <p>${task.id}</p>
-            <p>${inputCheck} <i class= fa-solid fa-circle-minus" onclick= "deleteTask(${task.id}"></i></p>
+            <p><b>${task.id}</b></p>
+            <p>${inputCheck} <i class="fa-solid fa-delete-left" onclick="deleteTask(${task.id})"></i></p>
         </article>
         `;
         if (task.completed === true) {
