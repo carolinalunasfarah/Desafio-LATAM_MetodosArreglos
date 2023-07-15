@@ -7,7 +7,17 @@
         <!-- css -->
         <link rel="stylesheet" href="assets/css/style.css" />
         <!-- fontawesome -->
-        <script src="https://kit.fontawesome.com/f4fd55b42a.js" crossorigin="anonymous"></script>
+        <script
+            src="https://kit.fontawesome.com/f4fd55b42a.js"
+            crossorigin="anonymous"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=VT323&display=swap"
+            rel="stylesheet" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     </head>
     <body>
         <main>
@@ -16,12 +26,13 @@
                     <h3>To do List</h3>
                 </article>
                 <article class="addingTask">
-                    <input type="text" id="inputAdd" />
-                    <button id="btnAdd">Add</button>
+                    <input type="text" id="inputAdd" placeholder="Write a new task" />
+                    <button id="btnAdd">Add new task</button>
                 </article>
                 <article class="taskCount">
-                    <p>Total: <span id="count"></span></p>
-                    <p>Done: <span id="done"></span></p>
+                    <h3>Total: <span id="count"></span></h3>
+                    <h3>Done: <span id="done"></span></h3>
+                    <i class="fa-solid fa-arrows-rotate" id="refresh"></i>
                 </article>
                 <article class="taskList"></article>
             </div>

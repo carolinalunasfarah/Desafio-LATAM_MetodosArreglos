@@ -9,6 +9,7 @@ let btnAdd = document.querySelector("#btnAdd");
 let count = document.querySelector("#count");
 let done = document.querySelector("#done");
 let taskList = document.querySelector(".taskList");
+let refreshIcon = document.querySelector("#refresh");
 
 let taskAdd = () => {
     let taskName = inputAdd.value;
@@ -66,8 +67,8 @@ let renderTasks = () => {
         : `<span  onclick="changeStatus(${task.id})">${task.name}</span>`;
         html += `
         <article class= "check">
-            <p><b>${task.id}</b></p>
-            <p>${inputCheck} <i class="fa-solid fa-delete-left" onclick="deleteTask(${task.id})"></i></p>
+            <p class = "checkId"><b>${task.id}</b></p>
+            <p><b>${inputCheck}</b><i class="fa-solid fa-delete-left" onclick="deleteTask(${task.id})"></i></p>
         </article>
         `;
         if (task.completed === true) {
@@ -78,5 +79,10 @@ let renderTasks = () => {
     count.innerHTML = tasks.length;
     done.innerHTML = doneCount.length;
 };
-
 renderTasks();
+
+let refresh = () => {
+    location.reload(true);
+};
+
+refreshIcon.addEventListener("click", refresh)

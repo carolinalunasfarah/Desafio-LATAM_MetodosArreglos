@@ -1,69 +1,140 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
 }
 
+/* container */
 .container {
-    height: 50vh;
-    padding: 5rem;
+    min-height: 50vh;
+    padding: 3rem;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: rgb(209, 195, 230);
+    border-radius: 5rem;
 }
 
+/* main */
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem;
+    margin: 3rem;
 }
 
+/* title */
 .title {
-    padding: 1rem;
+    margin: 0.5rem;
 }
 
+.title h3 {
+    font-family: "VT323", monospace;
+    font-size: 40px;
+    color: rgb(124, 61, 219);
+}
+
+/* adding task */
 .addingTask {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #inputAdd {
-    margin: 1rem;
+    margin: 0.5rem;
+    font-size: 18px;
+    height: 3rem;
+    border: none;
+    border-radius: 1rem;
 }
 
 #btnAdd {
-    margin: 1rem;
-    height: 2rem;
-    width: 3rem;
+    margin: 0.5rem;
+    height: 3rem;
+    width: 8rem;
+    font-size: 18px;
+    font-weight: 900;
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+    color: rgb(124, 61, 219);
 }
 
+#btnAdd:hover {
+    transition: 1s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+::placeholder {
+    padding: 1rem;
+}
+
+/* task count */
 .taskCount {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.taskCount p {
+.taskCount h3 {
     margin: 1rem;
 }
 
+.fa-arrows-rotate {
+    margin: 1rem;
+}
+
+.fa-arrows-rotate:hover {
+    transition: 1s ease-in-out;
+    transform: scale(1.5);
+    color: rgb(91, 5, 221);
+    cursor: pointer;
+}
+
+#done {
+    color: rgb(91, 5, 221);
+}
+
+/* check */
 .check {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
     margin: 1rem;
+    color: rgb(94, 0, 235);
 }
 
 .check p {
     margin-right: 1rem;
 }
 
-.completed {
-    background-color: yellow;
-    text-decoration: line-through;
-    text-decoration-color: black;
+.checkId {
+    color: black;
 }
 
-.fa-solid {
+.completed {
+    background-color: rgba(255, 255, 0, 0.5);
+    text-decoration: line-through;
+    text-decoration-color: black;
+    cursor: pointer;
+}
+
+span {
+    cursor: pointer;
+}
+
+.fa-delete-left {
     margin-left: 1rem;
+    color: black;
+}
+
+.fa-delete-left:hover {
+    transition: 1s ease-in-out;
+    transform: scale(1.5);
+    color: rgb(255, 255, 0);
+    cursor: pointer;
 }
