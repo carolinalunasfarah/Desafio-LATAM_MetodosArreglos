@@ -91,12 +91,12 @@ main {
 .fa-arrows-rotate:hover {
     transition: 1s ease-in-out;
     transform: scale(1.5);
-    color: rgb(91, 5, 221);
+    color: rgb(124, 61, 219);
     cursor: pointer;
 }
 
 #done {
-    color: rgb(91, 5, 221);
+    color:rgb(124, 61, 219);
 }
 
 /* check */
@@ -105,7 +105,7 @@ main {
     justify-content: start;
     align-items: center;
     margin: 1rem;
-    color: rgb(94, 0, 235);
+    color: rgb(124, 61, 219);
 }
 
 .check p {
